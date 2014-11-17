@@ -6,7 +6,7 @@ int size = 1;
 int count = 0;
 
 void setup() {
-  img = loadImage("578571_229186487225753_674458546_n.jpg");
+  img = loadImage("axelhutte.jpg");
   img.resize(displayWidth, displayHeight);
   size(displayWidth, displayHeight);
   image(img, 0, 0);
