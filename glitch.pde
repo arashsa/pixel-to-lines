@@ -3,6 +3,7 @@
 PImage img;
 char setup = 'd'; //down, right, left, up
 int size = 1;
+int count = 0;
 
 void setup() {
   img = loadImage("578571_229186487225753_674458546_n.jpg");
@@ -52,6 +53,15 @@ void keyPressed() {
   }
   if (key == '+') {
     size++;
+  }
+  if (key == '-') {
+    size--;
+  }
+  if (key == 's') {
+    noCursor();
+    saveFrame("saved" + count + ".png");
+    count++;
+    cursor();
   }
 }
 
