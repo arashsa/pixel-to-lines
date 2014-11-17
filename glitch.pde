@@ -2,6 +2,7 @@
 
 PImage img;
 char setup = 'd'; //down, right, left, up
+int size = 1;
 
 void setup() {
   img = loadImage("578571_229186487225753_674458546_n.jpg");
@@ -14,7 +15,7 @@ void draw() {
   loadPixels();
   if (mousePressed) {
     color c = pixels[mouseY*width+mouseX];
-    strokeWeight((int)random(2));
+    strokeWeight(size);
     stroke(c);
     fill(c);
 
@@ -48,6 +49,9 @@ void keyPressed() {
   }
   if (key == 'u') {
     setup = 'u';
+  }
+  if (key == '+') {
+    size++;
   }
 }
 
